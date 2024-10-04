@@ -16,10 +16,10 @@ const Maps = () => {
   return (
     <div className="flex flex-col gap-3 text-white items-center justify-center pt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" id='school'>
       <div className='md:pt-20'>
-      <div className='relative'>
-        <h2 className="absolute inset-0 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-gray-400 font-serif">Our School</h2>
-        <h2 className="relative pl-6 pt-3 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-white font-serif">Our School</h2>
-      </div>
+        <div className='relative'>
+          <h2 className="absolute inset-0 text-3xl font-bold tracking-tight md:pb-16 text-center sm:text-4xl text-gray-400 font-serif">Our School</h2>
+          <h2 className="relative pl-6 pt-2 text-3xl font-bold tracking-tight md:pb-16 text-center sm:text-4xl text-white font-serif">Our School</h2>
+        </div>
         <p className='p-9 text-center font-serif'>Welcome to Rising Star Academy Where Brilliance Takes Root!</p>
       </div>
       {/* new */}
@@ -44,7 +44,7 @@ const Maps = () => {
       <div className={`flex flex-col items-center gap-2 md:gap-8 p-4 md:p-16 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg mx-5`}>
         <div className='flex flex-col gap-3'>
           <h1 className='text-3xl font-bold italic'>Rising Star kindergarten school</h1>
-          <p>A child’s early years lay the founfoundation for all that is to come. At Rising Star
+          <p>A child’s early years lay foundation for all that is to come. At Rising Star
             Kindergarten, we nurture curiosity, creativity, and a love for learning that lasts a
             lifetime. At Rising Star Kindergarten, we cultivate an environment where young minds thrive,
             and every day is an opportunity to explore, grow, and imagine.</p>

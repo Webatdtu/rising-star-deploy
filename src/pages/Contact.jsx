@@ -34,7 +34,7 @@ const Contact = () => {
     <section className="md:p-10 p-6 md:h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" id="contact">
       <div className='relative'>
         <h2 className="absolute inset-0 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-gray-400 font-serif">Contact us</h2>
-        <h2 className="relative pl-6 pt-3 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-white font-serif">Contact us</h2>
+        <h2 className="relative pl-6 pt-2 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-white font-serif">Contact us</h2>
       </div>
       <div className="flex md:flex-row flex-col">
         <div className="p-3 mb-6 md:mr-10 rounded-x text-white">
