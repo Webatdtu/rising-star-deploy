@@ -7,9 +7,9 @@ body{
   padding: 0;
   box-sizing: border-box; 
 }
-#home{
-  background: url('./assets/ba3.jpg') no-repeat;
-  background-size: contain;
+#hom{
+  background: url('./assets/back.jpg') no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   position: relative;

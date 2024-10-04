@@ -10,7 +10,7 @@ const Footer  = () => {
 
                     <div className='md:col-span-2'>
                         <h1 className='text-orange-500 text-3xl font-bold'>Rising Star Academy</h1>
-                        <p className='text-gray-400 py-3'>Welcome to Raising Star Academy, We offer a balanced blend of academic excellence and 
+                        <p className='text-gray-400 py-3'>Welcome to Rising Star Academy, We offer a balanced blend of academic excellence and 
                             character building, ensuring your child grows both mentally and emotionally.</p>
                         <div className="flex gap-2 py-2">
                         <a href="https://t.me/+Hc62vbhfneYzZDVK" className=""><FaTelegramPlane size={20} /></a>

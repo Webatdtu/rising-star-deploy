@@ -32,7 +32,10 @@ const Contact = () => {
 
   return (
     <section className="md:p-10 p-6 md:h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" id="contact">
-      <h2 className="text-4xl font-bold mb-20 text-center font-serif text-white">Contact Us</h2>
+      <div className='relative'>
+        <h2 className="absolute inset-0 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-gray-400 font-serif">Contact us</h2>
+        <h2 className="relative pl-6 pt-3 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-white font-serif">Contact us</h2>
+      </div>
       <div className="flex md:flex-row flex-col">
         <div className="p-3 mb-6 md:mr-10 rounded-x text-white">
           <p className="italic text mb-9">
@@ -58,7 +61,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail} className="w-ful md:p-15 md:mx-10 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
+        <form ref={form} onSubmit={sendEmail} className="w-ful md:p-15 md:-10 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg">
           <h1 className="p-7 pl-2 text-white">If you want to send us any comment you can write us simply here!</h1>
           <div className="mb-4 px-3">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">

@@ -13,40 +13,18 @@ const Maps = () => {
   // Replace this with your Google Maps Embed URL
   const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5135632493066!2d38.823380810248935!3d9.01682698914274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9b0016af668f%3A0x1790f771a983a8f7!2sRising%20Star%20Academy!5e0!3m2!1sen!2set!4v1726549018124!5m2!1sen!2set";
 
-  //animation
-  const aboutRef = useRef(null); // Reference to the About section
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.2 } // 20% of the element needs to be visible to trigger
-    );
-
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-    }
-
-    return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
-    };
-  }, [])
-
   return (
-    <div ref={aboutRef} className="flex flex-col gap-3 text-white items-center justify-center pt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" id='school'>
-      <div className='mx-10 md:pt-20'>
-        <h1 className='text-3xl font-bold text-center font-serif'>Our School</h1>
-        <p className='p-9 font-serif'>Welcome to Rising Star Academy Where Brilliance Takes Root!</p>
+    <div className="flex flex-col gap-3 text-white items-center justify-center pt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" id='school'>
+      <div className='md:pt-20'>
+      <div className='relative'>
+        <h2 className="absolute inset-0 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-gray-400 font-serif">Our School</h2>
+        <h2 className="relative pl-6 pt-3 text-3xl font-bold tracking-tight pb-16 text-center sm:text-4xl text-white font-serif">Our School</h2>
+      </div>
+        <p className='p-9 text-center font-serif'>Welcome to Rising Star Academy Where Brilliance Takes Root!</p>
       </div>
       {/* new */}
-      <div className={`py-10 p-4 md:p-16 mx-8 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg
-      transition-transform duration-1000 transform ${isVisible ? 'translate-x-0' : '-translate-x-full'
-        }`}>
+      <div className={`py-10 p-4 md:p-16 mx-5 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg
+      `}>
         <div >
           <h2 className="text-xl font-semibold mb-3">Our Story</h2>
           <p className="max-w-3x mx-auto text-lg mb-6">
@@ -63,8 +41,7 @@ const Maps = () => {
         </div>
       </div>
       {/*     kindergarten     */}
-      <div className={`flex flex-col items-center gap-2 md:gap-8 p-4 md:p-16 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg mx-8 transition-transform duration-1000 transform ${isVisible ? 'translate-x-0' : '-translate-x-full'
-        }`}>
+      <div className={`flex flex-col items-center gap-2 md:gap-8 p-4 md:p-16 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg mx-5`}>
         <div className='flex flex-col gap-3'>
           <h1 className='text-3xl font-bold italic'>Rising Star kindergarten school</h1>
           <p>A child’s early years lay the founfoundation for all that is to come. At Rising Star
@@ -98,23 +75,22 @@ const Maps = () => {
             )}
         </div>
         {/*    images  1   */}
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto py-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <img src={p1} alt="Placeholder 1"
-              className="w-full h-auto md:h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-44 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img src={p2} alt="Placeholder 2"
-              className="w-full h-auto md:h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-44 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img src={p3} alt="Placeholder 3"
-              className="w-full h-auto md:h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-44 md:h-64 object-cover rounded-lg shadow-md"
             />
           </div>
         </div>
       </div>
-      <div className={`flex flex-col items-center gap-2 md:gap-8 p-4 md:p-16 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg mx-8 transition-transform duration-1000 transform ${isVisible ? 'translate-x-0' : '-translate-x-full'
-        }`}>
-        <div className='flex flex-col gap-3 '>
+      <div className={`flex flex-col items-center gap-2 md:gap-8 p-4 md:p-16 bg-white/30 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg mx-5`}>
+        <div className='flex flex-col gap-3'>
           <h1 className='text-3xl font-bold italic'>Rising Star Primary school</h1>
           <p>Through a balance of structured learning and creative play, our kindergarten program builds the
             social, emotional, and academic foundations for future success. At Rising Star Primary school, we cultivate an environment where young minds thrive, and
@@ -131,7 +107,7 @@ const Maps = () => {
         <div>
           {showMap2 ?
             <> </> : (
-              <div className="mt-5 w-ful max-w-lg md:h-72 h-64 rounded-lg">
+              <div className="mt-5 md:w-[1000px] md:h-80 h-64 rounded-lg">
                 <iframe
                   src={googleMapsEmbedUrl}
                   width="100%"
@@ -144,16 +120,16 @@ const Maps = () => {
               </div>
             )}
         </div>
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto py-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <img src={pp1} alt="Placeholder 1"
-              className="w-full h-auto md:h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-44 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img src={pp2} alt="Placeholder 2"
-              className="w-full h-auto md:h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-44 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img src={pp3} alt="Placeholder 3"
-              className="w-full h-auto md:h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-44 md:h-64 object-cover rounded-lg shadow-md"
             />
           </div>
         </div>
